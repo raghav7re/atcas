@@ -8,8 +8,8 @@
 echo "enter username"
 
 read name
-
-who | awk -v  name=$name -F  : 'match($1, name )' 
+#some random text
+who | awk -v  name=$name -F  : 'match($1, name )'
 
 echo "command 2"
 #awk -F: 'match($0, $name )'  | who
