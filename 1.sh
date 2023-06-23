@@ -1,11 +1,19 @@
+#!/bin/bash
 # Hi,
 
 # Please create scripts below.
 
 # write a script which can tell you whether given user is present in the server?
-#!/bin/bash
-result=`who`
-echo "$result"
+#result=`who`
+echo "enter username"
+
+read name
+
+who | awk -v  name=$name -F  : 'match($1, name )' 
+
+echo "command 2"
+#awk -F: 'match($0, $name )'  | who
+#echo "$result"
 
 #  ~/Documents/homework ╱ main ?1  ./1.sh                                                                      ✔ 
 # loconav          console      Jun 22 17:23
